@@ -35,7 +35,7 @@ add-extensions:
     add-ld-path: lib
     autodownload: true
     autodelete: true
-    version: 'stable'
+    version: stable
 cleanup-commands:
   - mkdir -p ${FLATPAK_DEST}/opera/chromium-codecs
 
@@ -92,8 +92,8 @@ modules:
       - install -Dm 644 -t /app/share/metainfo com.opera.Opera.metainfo.xml
     sources:
       - type: file
-        url: https://get.geo.opera.com/pub/opera/desktop/94.0.4606.38/linux/Opera_94.0.4606.38_amd64.deb
-        sha256: 959e710e06022a845689a6aeeaacfdd9bc6be9370987375643c5c74cb6184273
+        url: https://get.geo.opera.com/pub/opera/desktop/94.0.4606.54/linux/Opera_94.0.4606.54_amd64.deb
+        sha256: 20c5889091ca684ee7e51965e1913113a3d007d6b67f3d212f1e2f7246d13a09
         dest-filename: opera.deb
         only-arches: [x86_64]
         x-checker-data:
