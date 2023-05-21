@@ -22,10 +22,11 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://i.imgur.com/qZWm3KT.png</image>
+      <image>https://raw.githubusercontent.com/flathub/com.opera.Opera/update-0836dc0/screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="99.0.4788.13" date="2023-05-18"/>
     <release version="98.0.4759.39" date="2023-05-08"/>
     <release version="98.0.4759.15" date="2023-04-26"/>
     <release version="98.0.4759.6" date="2023-04-20"/>
