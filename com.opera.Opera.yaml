@@ -95,8 +95,8 @@ modules:
       - install -Dm 644 -t /app/share/metainfo com.opera.Opera.metainfo.xml
     sources:
       - type: file
-        url: https://get.geo.opera.com/pub/opera/desktop/103.0.4928.16/linux/Opera_103.0.4928.16_amd64.deb
-        sha256: 880944b1e5b88c4e9442fac8d274d256045c0b952067c5feaf1b5c48f999857d
+        url: https://get.geo.opera.com/pub/opera/desktop/103.0.4928.26/linux/Opera_103.0.4928.26_amd64.deb
+        sha256: f10b03f011894f739ff1a6dd834e152839f69f8eb7483e5c95c252a9b6421556
         dest-filename: opera.deb
         only-arches: [x86_64]
         x-checker-data:
