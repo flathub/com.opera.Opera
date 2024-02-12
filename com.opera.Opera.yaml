@@ -39,6 +39,9 @@ finish-args:
   - --env=GSETTINGS_BACKEND=dconf
   # For KDE proxy resolution (KDE5 only)
   - --filesystem=~/.config/kioslaverc
+  # Enables PWAs
+  - --filesystem=~/.local/share/applications:create
+  - --filesystem=~/.local/share/icons:create
 
 # Disabled because of issue #28
 #add-extensions:
