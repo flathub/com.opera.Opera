@@ -24,6 +24,7 @@ finish-args:
   - --talk-name=org.freedesktop.ScreenSaver
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.kde.kwalletd5
+  - --talk-name=org.kde.kwalletd6
   - --talk-name=org.gnome.SessionManager
   - --system-talk-name=org.freedesktop.Avahi
   - --own-name=org.mpris.MediaPlayer2.chromium.*
@@ -42,17 +43,6 @@ finish-args:
   # Enables PWAs
   - --filesystem=~/.local/share/applications:create
   - --filesystem=~/.local/share/icons:create
-
-# Disabled because of issue #28
-#add-extensions:
-#  org.chromium.Chromium.Codecs:
-#    directory: opera/chromium-codecs
-#    add-ld-path: lib
-#    autodownload: true
-#    autodelete: true
-#    version: stable
-#cleanup-commands:
-#  - mkdir -p ${FLATPAK_DEST}/opera/chromium-codecs
 
 modules:
   - name: dconf
@@ -90,17 +80,29 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
 
+  - name: opera-codecs
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/opera/lib_extra
+      - install -Dm 644 -t /app/opera/lib_extra libffmpeg.so
+    sources:
+      - type: archive
+        url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.86.0/0.86.0-linux-x64.zip
+        sha256: 5a1cdf7d45f580f6a30b677e8a402453cba4856bcadd5f946550857d1c04497c
+        size: 5197260
+        x-checker-data:
+          type: rotating-url
+          url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-/-linux-x64.zip
+          pattern: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-${version}/${version}-linux-x64.zip
+
   - name: opera
     buildsystem: simple
     build-commands:
       - mkdir -p /app/opera /app/tmp-install/data
       - bsdtar -xf opera.deb -C /app/tmp-install
       - bsdtar -xf /app/tmp-install/data.tar.xz -C /app/tmp-install/data
-      - mv /app/tmp-install/data/usr/lib/x86_64-linux-gnu/opera /app
+      - cp -rl /app/tmp-install/data/usr/lib/x86_64-linux-gnu/opera /app
       - rm -rf /app/tmp-install opera.deb
-# Disabled because of issue #28
-#      - mkdir /app/opera/lib_extra
-#      - ln -s /app/opera/chromium-codecs/lib/libffmpeg.so /app/opera/lib_extra/libffmpeg.so
       - install -Dm 644 com.opera.Opera.desktop /app/share/applications/com.opera.Opera.desktop
       - install -Dm 644 Opera_2015_icon.svg /app/share/icons/hicolor/scalable/apps/com.opera.Opera.svg
       - install -Dm 755 opera.sh /app/bin/opera
@@ -108,15 +110,15 @@ modules:
       - install -Dm 644 -t /app/share/metainfo com.opera.Opera.metainfo.xml
     sources:
       - type: file
-        url: https://get.geo.opera.com/pub/opera/desktop/109.0.5097.38/linux/Opera_109.0.5097.38_amd64.deb
-        sha256: 7a58d55da1cdee03eaa682f7cfe173fc11fa6fed6ac521ed1659fa342c65f6d7
+        url: https://get.geo.opera.com/pub/opera/desktop/109.0.5097.80/linux/opera-stable_109.0.5097.80_amd64.deb
+        sha256: dcd4a29c84d88acba5479acd8529f0402dc3f692968f849d06d16dffd3a00afa
         dest-filename: opera.deb
         only-arches: [x86_64]
         x-checker-data:
           type: anitya
           project-id: 7242
           stable-only: true
-          url-template: https://get.geo.opera.com/pub/opera/desktop/$version/linux/Opera_${version}_amd64.deb
+          url-template: https://get.geo.opera.com/pub/opera/desktop/$version/linux/opera-stable_${version}_amd64.deb
       - type: file
         path: cobalt.ini
       - type: file
