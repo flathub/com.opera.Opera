@@ -108,15 +108,15 @@ modules:
       - install -Dm 644 -t /app/share/metainfo com.opera.Opera.metainfo.xml
     sources:
       - type: file
-        url: https://get.geo.opera.com/pub/opera/desktop/109.0.5097.38/linux/Opera_109.0.5097.38_amd64.deb
-        sha256: 7a58d55da1cdee03eaa682f7cfe173fc11fa6fed6ac521ed1659fa342c65f6d7
+        url: https://get.geo.opera.com/pub/opera/desktop/109.0.5097.80/linux/opera-stable_109.0.5097.80_amd64.deb
+        sha256: dcd4a29c84d88acba5479acd8529f0402dc3f692968f849d06d16dffd3a00afa
         dest-filename: opera.deb
         only-arches: [x86_64]
         x-checker-data:
           type: anitya
           project-id: 7242
           stable-only: true
-          url-template: https://get.geo.opera.com/pub/opera/desktop/$version/linux/Opera_${version}_amd64.deb
+          url-template: https://get.geo.opera.com/pub/opera/desktop/$version/linux/opera-stable_${version}_amd64.deb
       - type: file
         path: cobalt.ini
       - type: file
