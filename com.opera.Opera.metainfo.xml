@@ -62,6 +62,7 @@
           <li>Show Duplicate Indicator on Link: This feature helps users identify and avoid navigating to duplicate links.</li>
           <li>Drag Multiple Tabs: Users can now drag multiple tabs simultaneously, improving tab management and workflow efficiency.</li>
         </ul>
+      </description>
     </release>
     <release version="109.0.5097.80" date="2024-05-08"/>
     <release version="109.0.5097.38" date="2024-04-02"/>
