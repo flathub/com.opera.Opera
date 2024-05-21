@@ -1,32 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2017 the Chromium authors, with modifications -->
 <component type="desktop-application">
   <id>com.opera.Opera</id>
   <launchable type="desktop-id">com.opera.Opera.desktop</launchable>
   <name>Opera</name>
   <developer_name>Opera</developer_name>
-  <summary>The web browser from Opera</summary>
+  <summary>Your personal browser</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
-  <url type="homepage">https://opera.com/</url>
+  <url type="homepage">https://www.opera.com/</url>
+  <url type="faq">https://help.opera.com/en/faq/</url>
+  <url type="help">https://www.opera.com/help</url>
   <description>
     <p>
-      Fast, secure, easy-to-use web browser.
+      Faster, safer and smarter than default browsers. Opera Browser is fully-featured for privacy, security, and everything you do online.
     </p>
     <p>
-      Opera is a fast, secure, and user-friendly web browser. It includes a built-in ad blocker, Video pop-out, and free VPN.
+      Opera's free VPN, Ad blocker, and Flow file sharing. Just a few of the must-have features built into Opera for faster, smoother and distraction-free browsing designed to improve your online experience.
+    </p>
+    <p>
+      Experience faster, distraction-free browsing with Ad blocking, and browse privately. Smoothly sync your data and send files between Opera on Mac, Windows, Linux, iOS, Android, and Chromebook.
     </p>
     <p>
       NOTE: This package is not verified by, affiliated with, or supported by Opera.
     </p>
   </description>
+  <keywords>
+    <keyword>web browser</keyword>
+  </keywords>
+  <categories>
+    <category>Network</category>
+    <category>WebBrowser</category>
+    <category>InstantMessaging</category>
+    <category>Chat</category>
+    <category>Feed</category>
+  </categories>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/com.opera.Opera/master/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/flathub/com.opera.Opera/master/screenshots/opera-newpage.png</image>
+      <caption>Speed dial page</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/com.opera.Opera/master/screenshots/opera-dark-newpage.png</image>
+      <caption>Speed dial page - dark theme</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/com.opera.Opera/master/screenshots/opera-dark-updated.png</image>
+      <caption>Client upgraded page - dark theme</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/com.opera.Opera/master/screenshots/opera-updated.png</image>
+      <caption>Client upgraded page</caption>
     </screenshot>
   </screenshots>
   <releases>
-    <release version="110.0.5130.23" date="2024-05-14"/>
+    <release version="110.0.5130.23" date="2024-05-14">
+      <url type="details">https://blogs.opera.com/desktop/changelog-for-110/</url>
+      <description>
+        <ul>
+          <li>Chromium Update: The browser has been updated to Chromium version 124.0.6367.62, enhancing both performance and security.</li>
+          <li>Scrollbar Button Fix: The issue of invisible scrollbar buttons on Windows has been resolved, providing a smoother user experience.</li>
+          <li>Show Duplicate Indicator on Link: This feature helps users identify and avoid navigating to duplicate links.</li>
+          <li>Drag Multiple Tabs: Users can now drag multiple tabs simultaneously, improving tab management and workflow efficiency.</li>
+        </ul>
+    </release>
     <release version="109.0.5097.80" date="2024-05-08"/>
     <release version="109.0.5097.38" date="2024-04-02"/>
     <release version="109.0.5097.35" date="2024-03-28"/>
