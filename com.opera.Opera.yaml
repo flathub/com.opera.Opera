@@ -92,8 +92,8 @@ modules:
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/latest
-          version-query: ".tag_name | sub(\"^nwjs-ffmpeg-\"; \"\")"
-          url-query: ".assets[] | select(.name==$version + \"-linux-x64.zip\") | .browser_download_url"
+          version-query: .tag_name | sub("^nwjs-ffmpeg-"; "")
+          url-query: .assets[] | select(.name==$version + "-linux-x64.zip") | .browser_download_url
 
   - name: opera
     buildsystem: simple
@@ -110,8 +110,8 @@ modules:
       - install -Dm 644 -t /app/share/metainfo com.opera.Opera.metainfo.xml
     sources:
       - type: file
-        url: https://get.geo.opera.com/pub/opera/desktop/110.0.5130.23/linux/opera-stable_110.0.5130.23_amd64.deb
-        sha256: 6356264d4bd71ce5c107931e8bc957d030a81243a681508fb53d469d3a8d4ed0
+        url: https://get.geo.opera.com/pub/opera/desktop/110.0.5130.35/linux/opera-stable_110.0.5130.35_amd64.deb
+        sha256: 605f1d95a8371c9225286f0586b3a15fad8e8a11d4b0e66bc768e47206af2bdd
         dest-filename: opera.deb
         only-arches: [x86_64]
         x-checker-data:
