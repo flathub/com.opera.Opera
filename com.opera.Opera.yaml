@@ -87,8 +87,8 @@ modules:
       - install -Dm 644 -t /app/opera/lib_extra libffmpeg.so
     sources:
       - type: archive
-        url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.87.0/0.87.0-linux-x64.zip
-        sha256: 95a99c09f54d391c93ff757219642ff9755265420915fa7c72fb686a1c53d42e
+        url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.88.0/0.88.0-linux-x64.zip
+        sha256: a8bcc460b892ce6efbedc9b2abd37308dfca507e600b6319b0a7107b2dbaf754
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/latest
@@ -110,8 +110,8 @@ modules:
       - install -Dm 644 -t /app/share/metainfo com.opera.Opera.metainfo.xml
     sources:
       - type: file
-        url: https://get.geo.opera.com/pub/opera/desktop/110.0.5130.66/linux/opera-stable_110.0.5130.66_amd64.deb
-        sha256: 0864f4383a9c80ae554b5ba6520458aff1df3324aa2c5279f7301be56f8dc258
+        url: https://get.geo.opera.com/pub/opera/desktop/111.0.5168.25/linux/opera-stable_111.0.5168.25_amd64.deb
+        sha256: 812564281f95523d98a60bc45f227daff400d17a17e1a6fd815bbf7d34e0bf49
         dest-filename: opera.deb
         only-arches: [x86_64]
         x-checker-data:
