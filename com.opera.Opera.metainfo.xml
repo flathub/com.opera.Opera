@@ -53,24 +53,13 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="111.0.5168.25" date="2024-06-12">
-      <description></description>
-    </release>
-    <release version="110.0.5130.66" date="2024-06-04">
-      <description/>
-    </release>
-    <release version="110.0.5130.64" date="2024-06-04">
-      <description/>
-    </release>
-    <release version="110.0.5130.49" date="2024-05-28">
-      <description/>
-    </release>
-    <release version="110.0.5130.39" date="2024-05-24">
-      <description/>
-    </release>
-    <release version="110.0.5130.35" date="2024-05-22">
-      <description/>
-    </release>
+    <release version="111.0.5168.55" date="2024-07-01"/>
+    <release version="111.0.5168.25" date="2024-06-12"/>
+    <release version="110.0.5130.66" date="2024-06-04"/>
+    <release version="110.0.5130.64" date="2024-06-04"/>
+    <release version="110.0.5130.49" date="2024-05-28"/>
+    <release version="110.0.5130.39" date="2024-05-24"/>
+    <release version="110.0.5130.35" date="2024-05-22"/>
     <release version="110.0.5130.23" date="2024-05-14">
       <url type="details">https://blogs.opera.com/desktop/changelog-for-110/</url>
       <description>
