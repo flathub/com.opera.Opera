@@ -83,12 +83,13 @@ modules:
   - name: opera-codecs
     buildsystem: simple
     build-commands:
-      - mkdir -p /app/opera/lib_extra
-      - install -Dm 644 -t /app/opera/lib_extra libffmpeg.so
+      - pwd # extra data is not available at this time
     sources:
-      - type: archive
+      - type: extra-data
+        filename: libffmpeg.zip
         url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.88.0/0.88.0-linux-x64.zip
         sha256: a8bcc460b892ce6efbedc9b2abd37308dfca507e600b6319b0a7107b2dbaf754
+        size: 4912235
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/latest
@@ -98,29 +99,31 @@ modules:
   - name: opera
     buildsystem: simple
     build-commands:
-      - mkdir -p /app/opera /app/tmp-install/data
-      - bsdtar -xf opera.deb -C /app/tmp-install
-      - bsdtar -xf /app/tmp-install/data.tar.xz -C /app/tmp-install/data
-      - cp -rl /app/tmp-install/data/usr/lib/x86_64-linux-gnu/opera /app
-      - rm -rf /app/tmp-install opera.deb
-      - install -Dm 644 com.opera.Opera.desktop /app/share/applications/com.opera.Opera.desktop
-      - install -Dm 644 Opera_2015_icon.svg /app/share/icons/hicolor/scalable/apps/com.opera.Opera.svg
-      - install -Dm 755 opera.sh /app/bin/opera
-      - install -Dm 644 -t /app/etc cobalt.ini
-      - install -Dm 644 -t /app/share/metainfo com.opera.Opera.metainfo.xml
+      - install -Dm 644 cobalt.ini ${FLATPAK_DEST}/etc
+      - install -Dm 644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm 644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm 644 Opera_2015_icon.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm 755 opera.sh ${FLATPAK_DEST}/bin/opera
+      - install -Dm 755 apply_extra.sh ${FLATPAK_DEST}/bin/apply_extra
+      - ln -s ${FLATPAK_DEST}/extra/opera ${FLATPAK_DEST}/opera
     sources:
-      - type: file
+      - type: extra-data
+        filename: opera.deb
+        only-arches:
+          - x86_64
         url: https://get.geo.opera.com/pub/opera/desktop/111.0.5168.25/linux/opera-stable_111.0.5168.25_amd64.deb
         sha256: 812564281f95523d98a60bc45f227daff400d17a17e1a6fd815bbf7d34e0bf49
-        dest-filename: opera.deb
-        only-arches: [x86_64]
+        size: 110244468
         x-checker-data:
+          is-main-source: true
           type: anitya
           project-id: 7242
           stable-only: true
           url-template: https://get.geo.opera.com/pub/opera/desktop/$version/linux/opera-stable_${version}_amd64.deb
       - type: file
         path: cobalt.ini
+      - type: file
+        path: apply_extra.sh
       - type: file
         path: com.opera.Opera.metainfo.xml
       - type: file
