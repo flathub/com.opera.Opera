@@ -130,7 +130,5 @@ modules:
         path: Opera_2015_icon.svg
       - type: file
         path: com.opera.Opera.desktop
-      - type: script
-        dest-filename: opera.sh
-        commands:
-          - exec cobalt "$@"
+      - type: file
+        path: opera.sh
