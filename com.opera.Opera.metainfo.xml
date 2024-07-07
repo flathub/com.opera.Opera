@@ -54,7 +54,14 @@
   </screenshots>
   <releases>
     <release version="111.0.5168.61" date="2024-07-04">
-      <description></description>
+      <url type="details">https://blogs.opera.com/desktop/changelog-for-111/</url>
+      <description>
+        <ul>
+          <li>Emoji Disappearance on Tabs After Restart/Update: Corrected an issue where emojis on tabs would disappear after a restart or update, ensuring consistent emoji visibility.</li>
+          <li>Emoji Visibility Behind Tab Island Handle: Resolved an issue where emojis were displayed behind the tab island handle, ensuring clear visibility.</li>
+          <li>Hover Emoji Display During Intro on Windows: Fixed a bug causing emojis to appear at the top of the window when hovering during the intro on Windows systems.</li>
+        </ul>
+      </description>
     </release>
     <release version="111.0.5168.55" date="2024-07-01"/>
     <release version="111.0.5168.25" date="2024-06-12"/>
