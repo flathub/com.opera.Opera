@@ -84,7 +84,8 @@ modules:
     buildsystem: simple
     build-commands:
       # Unpack Opera from deb archive
-      - bsdtar --to-stdout -xf opera.deb 'data.tar*' | bsdtar -xf - --strip-components=4 --include='./usr/lib/x86_64-linux-gnu/opera'
+      - bsdtar --to-stdout -xf opera.deb 'data.tar*' |
+        bsdtar -xf - --strip-components=4 --include='./usr/lib/x86_64-linux-gnu/opera'
       - mv opera ${FLATPAK_DEST}
       - install -Dm 644 cobalt.ini ${FLATPAK_DEST}/etc
       - install -Dm 644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
@@ -96,8 +97,8 @@ modules:
         dest-filename: opera.deb
         only-arches:
           - x86_64
-        url: https://get.geo.opera.com/pub/opera/desktop/111.0.5168.61/linux/opera-stable_111.0.5168.61_amd64.deb
-        sha256: 3b642aa2c9a184593a29f880765a4360eb1952a1a1bedc336058b623dd077a6a
+        url: https://get.geo.opera.com/pub/opera/desktop/112.0.5197.24/linux/opera-stable_112.0.5197.24_amd64.deb
+        sha256: 9fac4f0f6a269dca4d49bb1d35269d2c61f6512a36af64248da3f3e67ea6c309
         x-checker-data:
           is-main-source: true
           type: anitya
@@ -122,8 +123,8 @@ modules:
       - install -Dm 644 -t /app/opera/lib_extra libffmpeg.so
     sources:
       - type: archive
-        url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.88.0/0.88.0-linux-x64.zip
-        sha256: a8bcc460b892ce6efbedc9b2abd37308dfca507e600b6319b0a7107b2dbaf754
+        url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.89.0/0.89.0-linux-x64.zip
+        sha256: bb44e608501259bb6ee1d7c7244719fb0d32d889d270c9517f3e498697aebf8c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/latest
