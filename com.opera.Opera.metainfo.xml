@@ -53,6 +53,17 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="112.0.5197.24" date="2024-07-11">
+      <url type="details">https://blogs.opera.com/desktop/changelog-for-112/</url>
+      <description>
+        <ul>
+          <li>Chromium Update: Opera 112 is built on the latest Chromium version 126.0.6478.62, ensuring that users benefit from the most recent security patches.</li>
+          <li>Visual Enhancements: The “Add to Opera” text on Start Page is now clearly visible in light mode, and we’ve resolved numerous issues related to Tab Art and the display of emojis on tabs.</li>
+          <li>Performance and Stability: We have resolved numerous crashes and fixed issues with corrupted extensions after their removal. Additionally, we have ensured that the Adblocker is blocking or displaying ads according to user settings.</li>
+          <li>User Interface and Usability: We’ve fixed the rounded corners in fullscreen mode, enhanced workspace switch animations on Mac, and improved the handling of tab islands.</li>
+        </ul>
+      </description>
+    </release>
     <release version="111.0.5168.61" date="2024-07-04">
       <url type="details">https://blogs.opera.com/desktop/changelog-for-111/</url>
       <description>
