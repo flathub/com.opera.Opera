@@ -84,8 +84,8 @@ modules:
     buildsystem: simple
     build-commands:
       # Unpack Opera from deb archive
-      - bsdtar --to-stdout -xf opera.deb 'data.tar*' |
-        bsdtar -xf - --strip-components=4 --include='./usr/lib/x86_64-linux-gnu/opera'
+      - bsdtar --to-stdout -xf opera.deb 'data.tar*' | bsdtar -xf - --strip-components=4
+        --include='./usr/lib/x86_64-linux-gnu/opera'
       - mv opera ${FLATPAK_DEST}
       - install -Dm 644 cobalt.ini ${FLATPAK_DEST}/etc
       - install -Dm 644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
@@ -97,8 +97,8 @@ modules:
         dest-filename: opera.deb
         only-arches:
           - x86_64
-        url: https://get.geo.opera.com/pub/opera/desktop/112.0.5197.24/linux/opera-stable_112.0.5197.24_amd64.deb
-        sha256: 9fac4f0f6a269dca4d49bb1d35269d2c61f6512a36af64248da3f3e67ea6c309
+        url: https://get.geo.opera.com/pub/opera/desktop/112.0.5197.25/linux/opera-stable_112.0.5197.25_amd64.deb
+        sha256: b20aa3510b76415cb0a5974f91da542522186c9a6dbd666fab9fd035d66c9ade
         x-checker-data:
           is-main-source: true
           type: anitya
