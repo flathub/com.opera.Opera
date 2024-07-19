@@ -53,8 +53,11 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="112.0.5197.25" date="2024-07-16">
+    <release version="112.0.5197.30" date="2024-07-19">
       <description></description>
+    </release>
+    <release version="112.0.5197.25" date="2024-07-16">
+      <description/>
     </release>
     <release version="112.0.5197.24" date="2024-07-11">
       <url type="details">https://blogs.opera.com/desktop/changelog-for-112/</url>
