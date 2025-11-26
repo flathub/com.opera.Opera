@@ -86,7 +86,7 @@ modules:
       # Unpack Opera from deb archive
       - bsdtar --to-stdout -xf opera.deb 'data.tar*' | bsdtar -xf - --strip-components=4
         --include='./usr/lib/x86_64-linux-gnu/opera-stable'
-      - mv opera ${FLATPAK_DEST}
+      - mv opera-stable ${FLATPAK_DEST}/opera
       - install -Dm 644 cobalt.ini ${FLATPAK_DEST}/etc
       - install -Dm 644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm 644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
