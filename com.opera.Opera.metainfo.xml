@@ -11,14 +11,12 @@
   <url type="faq">https://help.opera.com/en/faq/</url>
   <url type="help">https://www.opera.com/help</url>
   <description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Opera.**</p>
     <p>
       Opera is a browser that offers features such as VPN, Ad Blocker, AI, Tab Islands, and more. It is chosen by millions of users for its superior performance and security, and it is also the first browser with mindfulness at its core.
     </p>
     <p>
       INFO: This flatpak can reproduce videos on Netflix etc. without any user configuration. In technical terms, it includes full codecs and is properly configured for DRM out of the box.
-    </p>
-    <p>
-      NOTE: This package is not verified by, affiliated with, or supported by Opera.
     </p>
   </description>
   <keywords>
