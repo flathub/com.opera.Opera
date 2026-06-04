@@ -123,8 +123,8 @@ modules:
       - install -Dm 644 -t /app/opera/lib_extra libffmpeg.so
     sources:
       - type: archive
-        url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.109.0/0.109.0-linux-x64.zip
-        sha256: cd26ace79201a73ec9b0433f174727b72f80d166cf12b143afaaae84bb08b124
+        url: https://github.com/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/download/nwjs-ffmpeg-0.112.0/0.112.0-linux-x64.zip
+        sha256: de883b561b112174d5c1c4719f277b42daf38ec0b7c177e694674c6ddfc653fd
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Ld-Hagen/nwjs-ffmpeg-prebuilt/releases/latest
