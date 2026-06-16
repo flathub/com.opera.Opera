@@ -97,8 +97,8 @@ modules:
         dest-filename: opera.deb
         only-arches:
           - x86_64
-        url: https://get.geo.opera.com/pub/opera/desktop/132.0.5905.37/linux/opera-stable_132.0.5905.37_amd64.deb
-        sha256: c74083a4f314469e4a500372fa43e6b5f2e94caa56abae7c2fa31179a164a7f1
+        url: https://get.geo.opera.com/pub/opera/desktop/132.0.5905.73/linux/opera-stable_132.0.5905.73_amd64.deb
+        sha256: 0350caeba13ee95701c80e07c99ad84aa042eb7df4df2688d2d87adea8601a0a
         x-checker-data:
           is-main-source: true
           type: anitya
